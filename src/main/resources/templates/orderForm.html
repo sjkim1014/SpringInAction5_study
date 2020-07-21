@@ -8,11 +8,20 @@
 </head>
 
 <body>
-	<form method="POST" th:action="@{/orders}" th:object="${order}">
+
+	<form method="POST" th:action="@{/logout}" id="logoutForm">
+		<input type="submit" value="logout" />
+	</form>
+	
+
+	<form method="POST" th:action="@{/orders}" th:object="${order}" id="orderForm">
 		<h1>Order Your TACO Creations!!!</h1>
 		
 		
 		<img th:src="@{/images/taco.jpg}" />
+		
+		<h3>Your Tacos in this order : </h3>
+		
 		<a th:href="@{/design}" id="another">Degign another TACO</a><br/>
 		
 		<ul>
